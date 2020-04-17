@@ -16,6 +16,8 @@ module.exports = {
 			`https://marketplace.ifood.com.br/v1/merchants?categories=${req.query.category == undefined ? "" : req.query.category}&latitude=${req.query.latitude}&longitude=${req.query.longitude}&page=0&channel=IFOOD&size=10&sort=&payment_types=&delivery_fee_from=0&delivery_fee_to=25&delivery_time_from=0&delivery_time_to=90`;
 		}
 
+		console.log(apiUrl);
+
 		const promises = [];
 		const foodMenu = [];
 
