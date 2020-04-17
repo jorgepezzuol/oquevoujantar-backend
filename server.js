@@ -11,6 +11,9 @@ app.use(cors());
 app.use('/api', require('./src/routes'));
 app.use('/resources', express.static(__dirname + '/images'));
 
-const NODE_PORT = 'process.env.PORT || 3000';
-//app.listen(3005);
-app.listen(NODE_PORT);
+app.set( 'port', ( process.env.PORT || 5000 ));
+
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+});
