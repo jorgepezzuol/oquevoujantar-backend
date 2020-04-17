@@ -4,7 +4,7 @@ module.exports = {
 
 	async fetchFood(req, res) {
 
-		const apiUrl;
+		const apiUrl = "";
 
 		if(req.query.test !== undefined) {
 			apiUrl =
