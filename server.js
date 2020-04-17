@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.options('*', cors());
+app.use(cors({
+    'origin': '*',
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    'preflightContinue': false
+  }));
 
 app.use('/api', require('./src/routes'));
 app.use('/resources', express.static(__dirname + '/images'));
