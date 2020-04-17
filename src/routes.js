@@ -4,8 +4,6 @@ const routes = express.Router();
 const iFoodController = require('./controllers/iFoodController');
 
 routes.get("/fetchFood", iFoodController.fetchFood);
-routes.get("/test", (req, res) => {
-    alert("aa");
-});
+routes.get("/test", iFoodController.test);
 
 module.exports = routes;

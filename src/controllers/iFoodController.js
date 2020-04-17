@@ -2,6 +2,10 @@ const axios = require("axios").default;
 
 module.exports = {
 
+	test(req, res) {
+		console.log("oe");
+	},	
+
 	async fetchFood(req, res) {
 
 		// PROD
