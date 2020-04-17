@@ -8,5 +8,5 @@ app.use(cors());
 app.use('/api', require('./src/routes'));
 app.use('/resources', express.static(__dirname + '/images'));
 
-// app.listen(3005);
+//app.listen(3005);
 app.listen(8080);
